@@ -1,0 +1,8 @@
+version: "3.9"  # Chỉ định phiên bản docker-compose
+services:
+  web:
+    build: .   # Build image từ Dockerfile trong thư mục hiện tại
+    ports:
+      - "8000:3000"  # Ánh xạ cổng 80 của host vào cổng 80 của container
+    volumes:
+      - ./:/app  # Mount thư mục hiện tại vào thư mục /app trong container
